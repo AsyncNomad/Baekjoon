@@ -1,3 +1,4 @@
+//1차원 동적 할당, 수학(진법 계산, 음의 진법)
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
@@ -37,12 +38,10 @@ int main() {
             double co = (double)x / b; // 나눗셈 결과의 실수형
             coefficient[i] = x - (int)ceil(fabs(co)) * b; // 음수에서 나눌 경우 나눗셈 결과에 절댓값 후 올림으로 몫 계산 후 나머지 계산
             x = (int)ceil(fabs(co));
-            //printf("** x < 0 c: %d, s: %d **\n", x, coefficient[i]);
         }
         else {
             coefficient[i] = x - (x / b) * b;
             x /= b;
-            //printf("** x > 0 c: %d, s: %d **\n", x, coefficient[i]);
         }
     }
 
