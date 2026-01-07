@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 int f(int n) {
-    int *fibonacci = malloc(sizeof(int) * (n + 2));
+    int *fibonacci = (int*)malloc(sizeof(int) * (n + 2));
     if (n == 0) {
         return 0;
     } else if (n == 1 || n == 2) {
@@ -22,5 +22,5 @@ int main() {
     int n = 0;
     scanf("%d", &n);
     printf("%d", f(n));
-    system("pause");
+    //system("pause");
 }
